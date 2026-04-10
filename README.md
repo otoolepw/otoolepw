@@ -12,7 +12,7 @@ Thirty years across enterprise software, CRM platforms, business intelligence an
 
 ## Portfolio
 
-All repositories are private. The projects below represent active and completed work across a consistent Python-dominant stack.
+The projects below represent active and completed work across a consistent Python-dominant stack.
 
 ### Copilot Data Ownership Suite
 **cpl-loader** · **cpl-viewer**
