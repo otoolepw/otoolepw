@@ -50,7 +50,7 @@ A B2B SaaS product in active commercial development. Full-stack FastAPI and Post
 ## Stack
 
 | Category | Technologies |
-|---|---|
+|:---|:---|
 | **Languages** | Python · T-SQL · C# · VB.NET · PowerShell · Bash |
 | **Python** | FastAPI · SQLAlchemy · Pandas · PySide6 · PyQt5 · Tkinter |
 | **Cloud & Platforms** | Azure · Render.com · Nextcloud · Active Directory · Dynamics 365 |
