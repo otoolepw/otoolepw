@@ -26,7 +26,7 @@ A complete end-to-end pipeline for taking ownership of Microsoft Copilot convers
 
 **Metrix** is a household utility tracker deployed live on a homelab LXC container. Parses Electric Ireland and Bord Gáis PDF bills automatically, tracks meter readings and surfaces consumption trends via Chart.js dashboards. Dual-utility architecture with electricity and gas live.
 
-**Nexus** is a self-hosted Progressive Web App homepage — a curated 8×6 tile grid of shortcuts deployed at nexus.nosignal.ie. Offline-capable via service worker, with drag-and-drop reorder, custom icon upload and JSON-driven configuration.
+**Nexus** is a self-hosted personal dashboard — a curated 8×6 tile grid of shortcuts served from a private web server. Features drag-and-drop reorder, right-click tile editing, icon upload, live search and JSON-driven configuration. Mobile is read-only; all edits sync to the server instantly.
 
 ### Personal Network & Hardware Toolkit
 **PKTrace** · **NetStat++** · **SysMon**
