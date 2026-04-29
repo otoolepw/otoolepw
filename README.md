@@ -44,9 +44,8 @@ Two tools for evaluating information quality. Calibre assesses the psychological
 A set of practical tools filling genuine gaps. WordPad++ is a modern multi-tab rich text editor replacing the application Microsoft removed from Windows 11. SQLsnip is a system-tray SQL snippet injector for SSMS with low-level keyboard hooks. Syntrax is a cross-device music synchronisation engine with a snapshot diff and sync planner. ClassDoc is a semantic document classification system using sentence-transformer embeddings, K-means clustering and a FastAPI web UI. RecTrax is a supermarket receipt analytics engine with OCR ingestion and store-specific parsers covering Lidl, Aldi, Dunnes, Tesco and SuperValu. IndieTrax is a personal indie game metrics tracker with an ideas pipeline, daily metrics ingestion and retention snapshots.
 
 ### Commercial SaaS
-**Parish Office** — parishoffice.ie · parishoffice.co.uk
 
-A B2B SaaS platform targeting approximately 33,000–38,500 Catholic and Protestant parishes across Ireland and the UK. FastAPI backend with Alembic migrations against PostgreSQL, Jinja2 + htmx + Bootstrap 5 frontend. Features include document management, meeting minutes with a Quill.js rich-text editor, collections tracking, rota scheduling, safeguarding logs, internal messaging, a people directory, and a dual-entity billing model supporting EUR and GBP. Role-based access with 6 permission levels, JWT authentication, GDPR-compliant.
+A B2B SaaS product in active commercial development targeting the faith sector across Ireland and the UK. FastAPI backend with Alembic migrations against PostgreSQL, Jinja2 + htmx + Bootstrap 5 frontend. Features include document management, meeting minutes with a rich-text editor, collections tracking, rota scheduling, safeguarding logs, internal messaging, a people directory, and a dual-entity billing model supporting EUR and GBP. Role-based access with 6 permission levels, JWT authentication, GDPR-compliant.
 
 ---
 
