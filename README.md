@@ -6,13 +6,13 @@ Available remotely across Ireland and the UK
 
 ---
 
-Thirty years across enterprise software, CRM platforms, business intelligence and infrastructure. Built and led Dynamics 365 deployments, ETL pipelines and BI portals across the charity and pharmaceutical sectors. Now building actively in Python -- and more recently C#/.NET -- across a portfolio of 17 private tools spanning data ownership, network diagnostics, homelab infrastructure, epistemic tooling, hardware monitoring and a commercial SaaS product in active development.
+Thirty years across enterprise software, CRM platforms, business intelligence and infrastructure. Built and led Dynamics 365 deployments, ETL pipelines and BI portals across the charity and pharmaceutical sectors. Now building actively in Python -- and more recently C#/.NET and Flutter/Dart -- across a portfolio of 19 private tools spanning data ownership, network diagnostics, homelab infrastructure, epistemic tooling, hardware monitoring, personal task tracking, a mobile wellbeing app and a commercial SaaS product in active development.
 
 ---
 
 ## Portfolio
 
-The projects below represent active and completed work across a consistent Python-dominant stack, with one C#/.NET desktop application.
+The projects below represent active and completed work across a consistent Python-dominant stack, with one C#/.NET desktop application and one Flutter/Dart mobile application.
 
 ### Copilot Data Ownership Suite
 **cpl-loader** · **cpl-viewer**
@@ -39,9 +39,13 @@ Three complementary tools covering different layers of system visibility. PKTrac
 Two tools for evaluating information quality. Calibre assesses the psychological impact style of communicators using Azure OpenAI -- stabilising or destabilising, scored and persisted to SQL Server. Veritas is a structured framework for evaluating the belief-worthiness of documentary-style media, combining a Discourse Layer (reasoning quality, evidence presence, speculation and narrative penalties) with a Participant Credence Score 70/30, producing a scored verdict with certainty percentage. Veritas now includes automatic YouTube transcript fetching, a linguistic heuristic analyser across 57 patterns, a batch evaluation CLI for CSV/JSON URL lists, and a local transcript cache.
 
 ### Standalone Utilities
-**WordPad++** · **SQLsnip** · **Syntrax** · **ClassDoc** · **RecTrax** · **IndieTrax**
+**WordPad++** · **SQLsnip** · **Syntrax** · **ClassDoc** · **RecTrax** · **IndieTrax** · **TaskTrax**
 
-A set of practical tools filling genuine gaps. WordPad++ is a modern multi-tab rich text editor replacing the application Microsoft removed from Windows 11. SQLsnip is a system-tray SQL snippet injector for SSMS with low-level keyboard hooks. Syntrax is a cross-device music synchronisation engine with a snapshot diff and sync planner. ClassDoc is a semantic document classification system using sentence-transformer embeddings, K-means clustering and a FastAPI web UI. RecTrax is a supermarket receipt analytics engine with OCR ingestion and store-specific parsers covering Lidl, Aldi, Dunnes, Tesco and SuperValu. IndieTrax is a personal indie game metrics tracker with an ideas pipeline, daily metrics ingestion and retention snapshots.
+A set of practical tools filling genuine gaps. WordPad++ is a modern multi-tab rich text editor replacing the application Microsoft removed from Windows 11. SQLsnip is a system-tray SQL snippet injector for SSMS with low-level keyboard hooks. Syntrax is a cross-device music synchronisation engine with a snapshot diff and sync planner. ClassDoc is a semantic document classification system using sentence-transformer embeddings, K-means clustering and a FastAPI web UI. RecTrax is a supermarket receipt analytics engine with OCR ingestion and store-specific parsers covering Lidl, Aldi, Dunnes, Tesco and SuperValu. IndieTrax is a personal indie game metrics tracker with an ideas pipeline, daily metrics ingestion and retention snapshots. TaskTrax is a single-file, offline task board -- no build step, no server, no account -- for tracking open threads across every other project in this portfolio, with JSON bulk import, automatic open/close timestamping and a copy-paste sync panel for moving state between devices.
+
+### Mobile
+
+**Anchor** is an autism-first executive-function and regulation companion for iOS and Android, helping autistic adults manage energy, plan their day and regulate without decision overload. Built in Flutter with Riverpod state management and a Drift/SQLite persistence layer, following a phase-strict roadmap with full CI (static analysis, tests, coverage ratchet).
 
 ### Commercial SaaS
 
@@ -53,9 +57,10 @@ A B2B SaaS product in active commercial development targeting the faith sector a
 
 | Category | Technologies |
 |:---|:---|
-| **Languages** | Python · C# · T-SQL · PowerShell · Bash · TypeScript |
+| **Languages** | Python · C# · Dart · T-SQL · PowerShell · Bash · TypeScript |
 | **Python** | FastAPI · SQLAlchemy · PySide6 · PyQt5 · Tkinter · EasyOCR · Scapy |
 | **C# / .NET** | .NET 9 · WPF · LiveChartsCore |
+| **Mobile** | Flutter · Riverpod · Drift (SQLite) · go_router · Material 3 |
 | **Frontend** | React · Vite · Tailwind CSS · htmx · Alpine.js · Bootstrap 5 · Chart.js |
 | **Cloud & Platforms** | Azure · Render.com · Cloudflare · Backblaze B2 · Dynamics 365 |
 | **Databases** | SQL Server · PostgreSQL · SQLite |
