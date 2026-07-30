@@ -6,7 +6,7 @@ Available remotely across Ireland and the UK
 
 ---
 
-Thirty years across enterprise software, CRM platforms, business intelligence and infrastructure. Built and led Dynamics 365 deployments, ETL pipelines and BI portals across the charity and pharmaceutical sectors. Now building actively in Python -- and more recently C#/.NET and Flutter/Dart -- across a portfolio of 19 private tools spanning data ownership, network diagnostics, homelab infrastructure, epistemic tooling, hardware monitoring, personal task tracking, a mobile wellbeing app and a commercial SaaS product in active development.
+Thirty years across enterprise software, CRM platforms, business intelligence and infrastructure. Built and led Dynamics 365 deployments, ETL pipelines and BI portals across the charity and pharmaceutical sectors. Now building actively in Python -- and more recently C#/.NET and Flutter/Dart -- across a portfolio of 21 private tools spanning data ownership, network diagnostics, homelab infrastructure, epistemic tooling, hardware and process monitoring, drive auditing, personal task tracking, a mobile wellbeing app and a commercial SaaS product in active development.
 
 ---
 
@@ -17,7 +17,7 @@ The projects below represent active and completed work across a consistent Pytho
 ### Copilot Data Ownership Suite
 **cpl-loader** · **cpl-viewer**
 
-A complete end-to-end pipeline for taking ownership of Microsoft Copilot conversation history. The loader is a Windows-native ETL tool with incremental detection and MERGE-based upsert logic; the viewer is a full-stack web application (FastAPI + React + TypeScript) with full-text search, topic cloud analysis and a monthly stats dashboard. Built for personal data sovereignty -- no third-party services involved.
+A complete end-to-end pipeline for taking ownership of Microsoft Copilot conversation history. The loader is a Windows-native ETL tool with incremental detection and MERGE-based upsert logic; the viewer is a full-stack web application (FastAPI + React + TypeScript) with full-text search, topic cloud analysis, a monthly stats/KPI dashboard, and a built-in admin panel for schema browsing, live ERD viewing and CSV import. Built for personal data sovereignty -- no third-party services involved.
 
 ### Homelab Utility Suite
 **GMARC** · **Metrix** · **Nexus**
@@ -29,9 +29,9 @@ A complete end-to-end pipeline for taking ownership of Microsoft Copilot convers
 **Nexus** is a self-hosted personal dashboard -- a curated 8×6 tile grid of shortcuts served from a private web server. Features drag-and-drop reorder, right-click tile editing, icon upload, live search and JSON-driven configuration. Mobile is read-only; all edits sync to the server instantly.
 
 ### Personal Network & Hardware Toolkit
-**PKTrace** · **NetStat++** · **SysMon**
+**PKTrace** · **NetStat++** · **SysMon** · **Spiketrax**
 
-Three complementary tools covering different layers of system visibility. PKTrace operates at the packet level (Wireshark-style capture with Scapy). NetStat++ monitors active TCP/UDP connections at the OS and process level. SysMon is a real-time hardware monitoring dashboard -- the portfolio's only C#/.NET project -- with 60-second rolling sparkline charts for CPU, Memory, Disk and Network, CPU/GPU temperatures via HWiNFO64, an internet speed test, and theme switching.
+Four complementary tools covering different layers of system visibility. PKTrace operates at the packet level (Wireshark-style capture with Scapy). NetStat++ monitors active TCP/UDP connections at the OS and process level. SysMon is a real-time hardware monitoring dashboard -- the portfolio's only C#/.NET project -- with 60-second rolling sparkline charts for CPU, Memory, Disk and Network, CPU/GPU temperatures via HWiNFO64, an internet speed test, and theme switching. Spiketrax is a generic, real-time CPU-spike monitor for any process by name or PID -- charts it live against a rolling ring buffer, detects sustained spikes via a dip-tolerant hysteresis state machine, captures a symbolicated stack sample of the offending process while it's spiking (macOS), and can optionally terminate it via exact PID/name match, never a substring.
 
 ### Epistemic Toolkit
 **Calibre** · **Veritas**
@@ -39,9 +39,9 @@ Three complementary tools covering different layers of system visibility. PKTrac
 Two tools for evaluating information quality. Calibre assesses the psychological impact style of communicators using Azure OpenAI -- stabilising or destabilising, scored and persisted to SQL Server. Veritas is a structured framework for evaluating the belief-worthiness of documentary-style media, combining a Discourse Layer (reasoning quality, evidence presence, speculation and narrative penalties) with a Participant Credence Score 70/30, producing a scored verdict with certainty percentage. Veritas now includes automatic YouTube transcript fetching, a linguistic heuristic analyser across 57 patterns, a batch evaluation CLI for CSV/JSON URL lists, and a local transcript cache.
 
 ### Standalone Utilities
-**WordPad++** · **SQLsnip** · **Syntrax** · **ClassDoc** · **RecTrax** · **IndieTrax** · **TaskTrax**
+**WordPad++** · **SQLsnip** · **Syntrax** · **ClassDoc** · **RecTrax** · **IndieTrax** · **TaskTrax** · **filescan**
 
-A set of practical tools filling genuine gaps. WordPad++ is a modern multi-tab rich text editor replacing the application Microsoft removed from Windows 11. SQLsnip is a system-tray SQL snippet injector for SSMS with low-level keyboard hooks. Syntrax is a cross-device music synchronisation engine with a snapshot diff and sync planner. ClassDoc is a semantic document classification system using sentence-transformer embeddings, K-means clustering and a FastAPI web UI. RecTrax is a supermarket receipt analytics engine with OCR ingestion and store-specific parsers covering Lidl, Aldi, Dunnes, Tesco and SuperValu. IndieTrax is a personal indie game metrics tracker with an ideas pipeline, daily metrics ingestion and retention snapshots. TaskTrax is a single-file, offline task board -- no build step, no server, no account -- for tracking open threads across every other project in this portfolio, with JSON bulk import, automatic open/close timestamping and a copy-paste sync panel for moving state between devices.
+A set of practical tools filling genuine gaps. WordPad++ is a modern multi-tab rich text editor replacing the application Microsoft removed from Windows 11. SQLsnip is a system-tray SQL snippet injector for SSMS with low-level keyboard hooks. Syntrax is an in-development cross-device music synchronisation engine, with a working library scanner, snapshot system and diff engine; the sync planner and device integration are still being built out. ClassDoc is a semantic document classification system using sentence-transformer embeddings, K-means clustering and a FastAPI web UI. RecTrax is a supermarket receipt ingestion engine for long-term price tracking, shrinkflation detection and cross-store comparison, with OCR ingestion and store-specific parsers covering Lidl, Aldi, Dunnes, Tesco and SuperValu (an analytics engine is planned for a later phase). IndieTrax is a personal indie game metrics tracker with an ideas pipeline, daily metrics ingestion and retention snapshots. TaskTrax is a single-file task board -- no build step, no database, no account -- for tracking open threads across every other project in this portfolio, syncing across devices via WebDAV to a self-hosted Nextcloud instance, with JSON bulk import and automatic open/close timestamping. filescan is a personal drive-auditing tool with no third-party dependencies, crawling drives into a SQLite database and producing quick stats or full intelligence reports covering media detection, duplicate files and housekeeping recommendations.
 
 ### Mobile
 
@@ -49,7 +49,7 @@ A set of practical tools filling genuine gaps. WordPad++ is a modern multi-tab r
 
 ### Commercial SaaS
 
-A B2B SaaS product in active commercial development targeting the faith sector across Ireland and the UK. FastAPI backend with Alembic migrations against PostgreSQL, Jinja2 + htmx + Bootstrap 5 frontend. Features include document management, meeting minutes with a rich-text editor, collections tracking, rota scheduling, safeguarding logs, internal messaging, a people directory, and a dual-entity billing model supporting EUR and GBP. Role-based access with 6 permission levels, JWT authentication, GDPR-compliant.
+A B2B SaaS product in active commercial development targeting the faith sector across Ireland and the UK, now live in production. FastAPI backend with Alembic migrations against PostgreSQL (EU-hosted for GDPR data residency), Jinja2 + Bootstrap 5 frontend. Live features include meeting minutes with a rich-text editor, collections tracking, internal messaging, platform administration, and a dual-entity billing model supporting EUR and GBP; document management, rota scheduling, safeguarding logs and a people directory are scaffolded and planned. Role-based access across 6 permission levels with JWT authentication.
 
 ---
 
@@ -58,10 +58,10 @@ A B2B SaaS product in active commercial development targeting the faith sector a
 | Category | Technologies |
 |:---|:---|
 | **Languages** | Python · C# · Dart · T-SQL · PowerShell · Bash · TypeScript |
-| **Python** | FastAPI · SQLAlchemy · PySide6 · PyQt5 · Tkinter · EasyOCR · Scapy |
+| **Python** | FastAPI · SQLAlchemy · Alembic · PySide6 · PyQt5 · Tkinter · EasyOCR · Scapy · pyodbc · psutil · pyqtgraph |
 | **C# / .NET** | .NET 9 · WPF · LiveChartsCore |
 | **Mobile** | Flutter · Riverpod · Drift (SQLite) · go_router · Material 3 |
-| **Frontend** | React · Vite · Tailwind CSS · htmx · Alpine.js · Bootstrap 5 · Chart.js |
+| **Frontend** | React · Vite · Tailwind CSS · Bootstrap 5 · Chart.js · Mermaid.js |
 | **Cloud & Platforms** | Azure · Render.com · Cloudflare · Backblaze B2 · Dynamics 365 |
 | **Databases** | SQL Server · PostgreSQL · SQLite |
 | **Servers & OS** | Windows Server · Debian / Ubuntu · Proxmox LXC · VMware |
