@@ -14,10 +14,10 @@ Thirty years across enterprise software, CRM platforms, business intelligence an
 
 The projects below represent active and completed work across a consistent Python-dominant stack, with one C#/.NET desktop application and one Flutter/Dart mobile application.
 
-### Copilot Data Ownership Suite
-**cpl-loader** · **cpl-viewer**
+### AI Chat Archive
+**ThreadArc**
 
-A complete end-to-end pipeline for taking ownership of Microsoft Copilot conversation history. The loader is a Windows-native ETL tool with incremental detection and MERGE-based upsert logic; the viewer is a full-stack web application (FastAPI + React + TypeScript) with full-text search, topic cloud analysis, a monthly stats/KPI dashboard, and a built-in admin panel for schema browsing, live ERD viewing and CSV import. Built for personal data sovereignty -- no third-party services involved.
+A unified, searchable archive of AI chat history across Copilot, Claude, ChatGPT and Gemini, with native apps for Windows, macOS, iOS and Android from a single Flutter codebase. Successor to the earlier cpl-loader/cpl-viewer pair (Copilot-only CSV → SQL Server ETL plus a FastAPI + React web viewer), which it retires once cutover completes. FastAPI + PostgreSQL backend on a homelab LXC, reachable only over Tailscale -- no public-facing hostname, ever, given the genuinely sensitive nature of the data. Real production data already imported (5,727 conversations across Copilot and Claude); Flutter client live for macOS, iOS and Android with full-text search, a KPI dashboard and monthly stats. Windows target and ChatGPT/Gemini parsers still to come. Built for personal data sovereignty -- no third-party services involved.
 
 ### Homelab Utility Suite
 **GMARC** · **Metrix** · **Nexus**
@@ -39,9 +39,9 @@ Four complementary tools covering different layers of system visibility. PKTrace
 Two tools for evaluating information quality. Calibre assesses the psychological impact style of communicators using Azure OpenAI -- stabilising or destabilising, scored and persisted to SQL Server. Veritas is a structured framework for evaluating the belief-worthiness of documentary-style media, combining a Discourse Layer (reasoning quality, evidence presence, speculation and narrative penalties) with a Participant Credence Score 70/30, producing a scored verdict with certainty percentage. Veritas now includes automatic YouTube transcript fetching, a linguistic heuristic analyser across 57 patterns, a batch evaluation CLI for CSV/JSON URL lists, and a local transcript cache.
 
 ### Standalone Utilities
-**WordPad++** · **SQLsnip** · **Syntrax** · **ClassDoc** · **RecTrax** · **IndieTrax** · **TaskTrax** · **filescan**
+**WordPad++** · **Mermaid++** · **SQLsnip** · **Syntrax** · **ClassDoc** · **RecTrax** · **IndieTrax** · **TaskTrax** · **filescan**
 
-A set of practical tools filling genuine gaps. WordPad++ is a modern multi-tab rich text editor replacing the application Microsoft removed from Windows 11. SQLsnip is a system-tray SQL snippet injector for SSMS with low-level keyboard hooks. Syntrax is an in-development cross-device music synchronisation engine, with a working library scanner, snapshot system and diff engine; the sync planner and device integration are still being built out. ClassDoc is a semantic document classification system using sentence-transformer embeddings, K-means clustering and a FastAPI web UI. RecTrax is a supermarket receipt ingestion engine for long-term price tracking, shrinkflation detection and cross-store comparison, with OCR ingestion and store-specific parsers covering Lidl, Aldi, Dunnes, Tesco and SuperValu (an analytics engine is planned for a later phase). IndieTrax is a personal indie game metrics tracker with an ideas pipeline, daily metrics ingestion and retention snapshots. TaskTrax is a single-file task board -- no build step, no database, no account -- for tracking open threads across every other project in this portfolio, syncing across devices via WebDAV to a self-hosted Nextcloud instance, with JSON bulk import and automatic open/close timestamping. filescan is a personal drive-auditing tool with no third-party dependencies, crawling drives into a SQLite database and producing quick stats or full intelligence reports covering media detection, duplicate files and housekeeping recommendations.
+A set of practical tools filling genuine gaps. WordPad++ is a modern multi-tab rich text editor replacing the application Microsoft removed from Windows 11. Mermaid++ is a fully offline native editor and previewer for Mermaid diagrams, built because the standard web option requires a cloud round-trip with no connection to local files -- a native window over the OS's own WebKit engine, vendored renderer, SVG/PNG/PDF export, and auto-fit zoom. SQLsnip is a system-tray SQL snippet injector for SSMS with low-level keyboard hooks. Syntrax is an in-development cross-device music synchronisation engine, with a working library scanner, snapshot system and diff engine; the sync planner and device integration are still being built out. ClassDoc is a semantic document classification system using sentence-transformer embeddings, K-means clustering and a FastAPI web UI. RecTrax is a supermarket receipt ingestion engine for long-term price tracking, shrinkflation detection and cross-store comparison, with OCR ingestion and store-specific parsers covering Lidl, Aldi, Dunnes, Tesco and SuperValu (an analytics engine is planned for a later phase). IndieTrax is a personal indie game metrics tracker with an ideas pipeline, daily metrics ingestion and retention snapshots. TaskTrax is a single-file task board -- no build step, no database, no account -- for tracking open threads across every other project in this portfolio, syncing across devices via WebDAV to a self-hosted Nextcloud instance, with JSON bulk import and automatic open/close timestamping. filescan is a personal drive-auditing tool with no third-party dependencies, crawling drives into a SQLite database and producing quick stats or full intelligence reports covering media detection, duplicate files and housekeeping recommendations.
 
 ### Mobile
 
@@ -65,7 +65,7 @@ A B2B SaaS product in active commercial development targeting the faith sector a
 | **Cloud & Platforms** | Azure · Render.com · Cloudflare · Backblaze B2 · Dynamics 365 |
 | **Databases** | SQL Server · PostgreSQL · SQLite |
 | **Servers & OS** | Windows Server · Debian / Ubuntu · Proxmox LXC · VMware |
-| **Networking** | pfSense · NGINX · Apache · OpenVPN · Zabbix |
+| **Networking** | pfSense · NGINX · Apache · OpenVPN · Tailscale · LibreNMS |
 | **BI & Reporting** | Power BI · SSRS · SSIS · IBM Cognos |
 | **Tools** | Git · GitHub · SSMS · Redgate · PyInstaller |
 | **AI & Tooling** | Claude · Claude Code · Azure OpenAI · Ollama |
