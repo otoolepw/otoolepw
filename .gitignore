@@ -1,1 +1,7 @@
-github_portfolio_synopsis_*.md
+.DS_Store
+Networking/
+KeePassXC/
+
+# Local-only portfolio working files — README.md has been moved out of this
+# folder to the repo root, where GitHub's profile-README feature requires it.
+GitHub/
