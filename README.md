@@ -99,7 +99,7 @@ A B2B SaaS product in active commercial development targeting the faith sector a
 | **Self-Hosted Services** | Nextcloud · Home Assistant |
 | **BI & Reporting** | Power BI · SSRS · SSIS · IBM Cognos |
 | **Tools** | Git · GitHub · SSMS · Redgate · PyInstaller |
-| **AI & Tooling** | Claude · Claude Code · Azure OpenAI · Ollama |
+| **AI & Tooling** | Claude Code · Azure OpenAI · Ollama |
 | **Certifications** | CompTIA Security+ · Network+ · Linux+ · Microsoft Certified Solution Developer (.NET) · Microsoft Certified Professional · CCNA (in progress) |
 
 ---
