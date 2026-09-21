@@ -14,13 +14,13 @@ Thirty years across enterprise infrastructure, networking, cybersecurity, virtua
 
 Not a GitHub repository, but a real, continuously operated infrastructure environment, run to the same standard as the enterprise work above. Full technical documentation is maintained privately (issues log, detailed reference, network diagrams, changelog) and kept current with every change.
 
-**Compute and virtualisation.** A single Proxmox host running 13 LXC/VM workloads: self-hosted Nextcloud, Jellyfin, PhotoPrism, Vaultwarden, Home Assistant and TaskTrax, a general-purpose web host, and a Windows/SQL Server VM, among others. Guest lifecycle is staged and risk-managed -- pre-flight validation, backup/rollback strategy, post-change verification -- not ad hoc.
+**Compute and virtualisation.** A single Proxmox host running 13 LXC/VM workloads: self-hosted media and productivity services (including Jellyfin and PhotoPrism), several other self-hosted applications, a general-purpose web host, and a Windows/SQL Server VM, among others. Guest lifecycle is staged and risk-managed -- pre-flight validation, backup/rollback strategy, post-change verification -- not ad hoc.
 
 **Network and security.** pfSense firewall with genuine VLAN segmentation (LAN, IOT, POT, ATU), a managed switch with correct trunk/access port discipline, and a dedicated access point for IoT isolation. Snort IDS on the WAN interface with GeoIP blocking and threat-intelligence feed filtering, with LAN-side deployment in progress. No flat network anywhere.
 
 **Monitoring.** LibreNMS providing full SNMP visibility across the entire fleet -- every Proxmox guest, both personal laptops, network infrastructure -- with port and sensor discovery, a custom NOC-style dashboard, and automated backfill/audit of every monitored device rather than a fire-and-forget install.
 
-**External exposure.** Every public-facing service (this includes two Hugo-based, Cloudflare Pages-deployed sites -- blog.nosignal.ie and nosignal.ie -- plus Nextcloud, Vaultwarden, Home Assistant and TaskTrax) is published via Cloudflare Tunnel. Zero open inbound ports on the WAN; Cloudflare Access gates anything administrative.
+**External exposure.** Every public-facing service (this includes two Hugo-based, Cloudflare Pages-deployed sites -- blog.nosignal.ie and nosignal.ie -- plus four other critical services) is published via Cloudflare Tunnel. Zero open inbound ports on the WAN; Cloudflare Access gates anything administrative.
 
 **Resilience.** Automated backup regimes across all guests, with recovery arrangements treated as unproven until actually tested, not assumed from configuration alone.
 
