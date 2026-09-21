@@ -71,7 +71,7 @@ Syntrax is an in-development cross-device music synchronisation engine, with a w
 ### Standalone
 **SQLsnip** · **RecTrax** · **TaskTrax**
 
-SQLsnip is a system-tray SQL snippet injector for SSMS with low-level keyboard hooks. RecTrax is a supermarket receipt ingestion engine for long-term price tracking, shrinkflation detection and cross-store comparison, with OCR ingestion and store-specific parsers covering Lidl, Aldi, Dunnes, Tesco and SuperValu (an analytics engine is planned for a later phase). TaskTrax is a single-file task board -- no build step, no database, no account -- for tracking open threads across every other project in this portfolio, syncing across devices via WebDAV to a self-hosted Nextcloud instance, with JSON bulk import and automatic open/close timestamping.
+SQLsnip is a system-tray SQL snippet injector for SSMS with low-level keyboard hooks. RecTrax is a supermarket receipt ingestion engine for long-term price tracking, shrinkflation detection and cross-store comparison, with OCR ingestion and store-specific parsers. TaskTrax is a single-file task board -- no build step, no database, no account -- for tracking open threads across every other project in this portfolio, syncing across devices via WebDAV to a self-hosted Nextcloud instance, with JSON bulk import and automatic open/close timestamping.
 
 ### Mobile
 
