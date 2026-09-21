@@ -1,12 +1,30 @@
 # Paul O'Toole
 
-**Architect · Developer · Engineer**  
+**Infrastructure & Systems Engineering Consultant**  
 potoole@nosignal.ie · Maynooth, Ireland.  
 Available remotely across Ireland and the UK
 
 ---
 
-Thirty years across enterprise software, CRM platforms, business intelligence and infrastructure. Built and led Dynamics 365 deployments, ETL pipelines and BI portals across the charity and pharmaceutical sectors. Now building actively in Python -- and more recently C#/.NET and Flutter/Dart -- across a portfolio of 21 private tools spanning data ownership, network diagnostics, homelab infrastructure, epistemic tooling, hardware and process monitoring, drive auditing, personal task tracking, a mobile wellbeing app and a commercial SaaS product in active development.
+Thirty years across enterprise infrastructure, networking, cybersecurity, virtualisation, CRM platforms and business intelligence. Built and led Dynamics 365 deployments, an enterprise VMware platform and ETL/BI pipelines across the charity and pharmaceutical sectors. Now building actively in Python -- and more recently C#/.NET and Flutter/Dart -- across a portfolio of 21 private tools spanning data ownership, network diagnostics, epistemic tooling, hardware and process monitoring, drive auditing, personal task tracking, a mobile wellbeing app and a commercial SaaS product in active development, alongside a self-managed production infrastructure environment described below.
+
+---
+
+## Homelab Engineering
+
+Not a GitHub repository, but a real, continuously operated infrastructure environment, run to the same standard as the enterprise work above. Full technical documentation is maintained privately (issues log, detailed reference, network diagrams, changelog) and kept current with every change.
+
+**Compute and virtualisation.** A single Proxmox host running 13 LXC/VM workloads: self-hosted Nextcloud, Jellyfin, PhotoPrism, Vaultwarden, Home Assistant and TaskTrax, a general-purpose web host, and a Windows/SQL Server VM, among others. Guest lifecycle is staged and risk-managed -- pre-flight validation, backup/rollback strategy, post-change verification -- not ad hoc.
+
+**Network and security.** pfSense firewall with genuine VLAN segmentation (LAN, IOT, POT, ATU), a managed switch with correct trunk/access port discipline, and a dedicated access point for IoT isolation. Snort IDS on the WAN interface with GeoIP blocking and threat-intelligence feed filtering, with LAN-side deployment in progress. No flat network anywhere.
+
+**Monitoring.** LibreNMS providing full SNMP visibility across the entire fleet -- every Proxmox guest, both personal laptops, network infrastructure -- with port and sensor discovery, a custom NOC-style dashboard, and automated backfill/audit of every monitored device rather than a fire-and-forget install.
+
+**External exposure.** Every public-facing service (this includes two Hugo-based, Cloudflare Pages-deployed sites -- blog.nosignal.ie and nosignal.ie -- plus Nextcloud, Vaultwarden, Home Assistant and TaskTrax) is published via Cloudflare Tunnel. Zero open inbound ports on the WAN; Cloudflare Access gates anything administrative.
+
+**Resilience.** Automated backup regimes across all guests, with recovery arrangements treated as unproven until actually tested, not assumed from configuration alone.
+
+**Recent work** includes a full LibreNMS rollout to every client device on the network (several hours of genuinely obscure Windows Update/CBS servicing-stack troubleshooting included), a staged and pre-flight-checked Proxmox 8→9 upgrade path, and migrating both personal sites from self-hosted Apache/tunnel delivery to a Hugo + Cloudflare Pages pipeline.
 
 ---
 
@@ -62,19 +80,19 @@ A B2B SaaS product in active commercial development targeting the faith sector a
 | **C# / .NET** | .NET 9 · WPF · LiveChartsCore |
 | **Mobile** | Flutter · Riverpod · Drift (SQLite) · go_router · Material 3 |
 | **Frontend** | React · Vite · Tailwind CSS · Bootstrap 5 · Chart.js · Mermaid.js |
-| **Cloud & Platforms** | Azure · Render.com · Cloudflare · Backblaze B2 · Dynamics 365 |
+| **Cloud & Platforms** | Azure · Render.com · Cloudflare (Pages, Tunnel, Access) · Hugo · Backblaze B2 · Dynamics 365 |
 | **Databases** | SQL Server · PostgreSQL · SQLite |
-| **Servers & OS** | Windows Server · Debian / Ubuntu · Proxmox LXC · VMware |
-| **Networking** | pfSense · NGINX · Apache · OpenVPN · Tailscale · LibreNMS |
+| **Servers & OS** | Windows Server · Debian / Ubuntu · Proxmox LXC/VM · VMware vSphere / ESXi |
+| **Networking & Security** | pfSense · Snort · NGINX · Apache · OpenVPN · Tailscale · LibreNMS · VLAN segmentation |
 | **BI & Reporting** | Power BI · SSRS · SSIS · IBM Cognos |
 | **Tools** | Git · GitHub · SSMS · Redgate · PyInstaller |
 | **AI & Tooling** | Claude · Claude Code · Azure OpenAI · Ollama |
-| **Certifications** | CompTIA Network+ · Security+ · Linux+ · Microsoft certifications |
+| **Certifications** | CompTIA Security+ · Network+ · Linux+ · Microsoft Certified Solution Developer (.NET) · Microsoft Certified Professional · CCNA (in progress) |
 
 ---
 
 ## Background
 
-Early career in Visual Basic and SQL Server through the 1990s and 2000s, progressing through ASP.NET, C# and .NET. Deep T-SQL and ETL expertise developed across eleven years at a large national charity, leading CRM, BI, and integration platforms. More recently: Dynamics 365 architecture, VMware virtualisation, Proxmox homelab, and a full return to active app development across Python and C#.
+Early career in Visual Basic and SQL Server through the 1990s and 2000s, progressing through ASP.NET, C# and .NET. Deep T-SQL and ETL expertise developed across eleven years at a large national charity, leading CRM, BI and integration platforms, including an 18-month Dynamics 365 migration and a rebuild of monthly claims processing that cut processing time by 95%. Most recently, IT Manager for a globally distributed organisation, promoted from SQL Server Developer within three months and responsible for infrastructure operations, network resilience and security incident escalation -- including delivering an enterprise VMware platform (vCenter, 8 ESXi hosts, 120+ VMs migrated). Now independently consulting on infrastructure, security and data, alongside the homelab environment above and a full return to active app development across Python and C#.
 
 ---
