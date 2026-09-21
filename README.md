@@ -14,11 +14,11 @@ Thirty years across enterprise infrastructure, networking, cybersecurity, virtua
 
 Infrastructure covering virtualisation, networking, monitoring and self-hosted services. Documented with an issues log, technical reference, network diagrams and a changelog.
 
-**Compute and virtualisation.** Single Proxmox host, 13 LXC/VM workloads: Nextcloud, Jellyfin, PhotoPrism, Home Assistant, LibreNMS, MySQL and PostgreSQL databases, Apache and Nginx, and a Windows/SQL Server VM.
+**Compute and virtualisation.** Proxmox host, 13 LXC/VM workloads incl: Nextcloud, Jellyfin, PhotoPrism, Home Assistant, LibreNMS, MySQL and PostgreSQL databases, Kali, Apache and Nginx, and a Windows/SQL Server, Ubuntu & Debian VMs.
 
-**Network and security.** pfSense firewall with VLAN segmentation, a managed switch with trunk/access ports, and a dedicated IoT access point. Snort IDS on the WAN interface with GeoIP blocking and threat-intelligence filtering; LAN-side deployment in progress.
+**Network and security.** pfSense firewall with VLAN segmentation, a managed switch with trunk/access ports, and a dedicated IoT access point. Snort IDS on the WAN interface with GeoIP blocking and threat-intelligence filtering.
 
-**Monitoring.** LibreNMS across the whole fleet, every Proxmox guest, both personal laptops, and network infrastructure, with port and sensor discovery and a custom dashboard.
+**Monitoring.** LibreNMS across the whole fleet, Proxmox guests, personal laptops, and network infrastructure (managed switches & APs), with port and sensor discovery and a custom dashboard.
 
 **External exposure.** Self-hosted services are published through Cloudflare Tunnel, with no open inbound ports on the WAN. blog.nosignal.ie and nosignal.ie are static Hugo sites served directly by Cloudflare Pages, outside the tunnel entirely. Cloudflare Access protects anything administrative.
 
@@ -58,10 +58,20 @@ Four complementary tools covering different layers of system visibility. PKTrace
 
 Two tools for evaluating information quality. Calibre assesses the psychological impact style of communicators using Azure OpenAI -- stabilising or destabilising, scored and persisted to SQL Server. Veritas is a structured framework for evaluating the belief-worthiness of documentary-style media, combining a Discourse Layer (reasoning quality, evidence presence, speculation and narrative penalties) with a Participant Credence Score 70/30, producing a scored verdict with certainty percentage. Veritas now includes automatic YouTube transcript fetching, a linguistic heuristic analyser across 57 patterns, a batch evaluation CLI for CSV/JSON URL lists, and a local transcript cache.
 
-### Standalone Utilities
-**WordPad++** · **Mermaid++** · **SQLsnip** · **Syntrax** · **ClassDoc** · **RecTrax** · **IndieTrax** · **TaskTrax** · **filescan**
+### Document Management
+**WordPad++** · **Mermaid++** · **ClassDoc** · **FileScan**
 
-A set of practical tools filling genuine gaps. WordPad++ is a modern multi-tab rich text editor replacing the application Microsoft removed from Windows 11. Mermaid++ is a fully offline native editor and previewer for Mermaid diagrams, built because the standard web option requires a cloud round-trip with no connection to local files -- a native window over the OS's own WebKit engine, vendored renderer, SVG/PNG/PDF export, and auto-fit zoom. SQLsnip is a system-tray SQL snippet injector for SSMS with low-level keyboard hooks. Syntrax is an in-development cross-device music synchronisation engine, with a working library scanner, snapshot system and diff engine; the sync planner and device integration are still being built out. ClassDoc is a semantic document classification system using sentence-transformer embeddings, K-means clustering and a FastAPI web UI. RecTrax is a supermarket receipt ingestion engine for long-term price tracking, shrinkflation detection and cross-store comparison, with OCR ingestion and store-specific parsers covering Lidl, Aldi, Dunnes, Tesco and SuperValu (an analytics engine is planned for a later phase). IndieTrax is a personal indie game metrics tracker with an ideas pipeline, daily metrics ingestion and retention snapshots. TaskTrax is a single-file task board -- no build step, no database, no account -- for tracking open threads across every other project in this portfolio, syncing across devices via WebDAV to a self-hosted Nextcloud instance, with JSON bulk import and automatic open/close timestamping. filescan is a personal drive-auditing tool with no third-party dependencies, crawling drives into a SQLite database and producing quick stats or full intelligence reports covering media detection, duplicate files and housekeeping recommendations.
+WordPad++ is a modern multi-tab rich text editor replacing the application Microsoft removed from Windows 11. Mermaid++ is a fully offline native editor and previewer for Mermaid diagrams, built because the standard web option requires a cloud round-trip with no connection to local files -- a native window over the OS's own WebKit engine, vendored renderer, SVG/PNG/PDF export, and auto-fit zoom. ClassDoc is a semantic document classification system using sentence-transformer embeddings, K-means clustering and a FastAPI web UI. FileScan is a personal drive-auditing tool with no third-party dependencies, crawling drives into a SQLite database and producing quick stats or full intelligence reports covering media detection, duplicate files and housekeeping recommendations.
+
+### Music & Gaming
+**Syntrax** · **IndieTrax**
+
+Syntrax is an in-development cross-device music synchronisation engine, with a working library scanner, snapshot system and diff engine; the sync planner and device integration are still being built out. IndieTrax is a personal indie game metrics tracker with an ideas pipeline, daily metrics ingestion and retention snapshots.
+
+### Standalone
+**SQLsnip** · **RecTrax** · **TaskTrax**
+
+SQLsnip is a system-tray SQL snippet injector for SSMS with low-level keyboard hooks. RecTrax is a supermarket receipt ingestion engine for long-term price tracking, shrinkflation detection and cross-store comparison, with OCR ingestion and store-specific parsers covering Lidl, Aldi, Dunnes, Tesco and SuperValu (an analytics engine is planned for a later phase). TaskTrax is a single-file task board -- no build step, no database, no account -- for tracking open threads across every other project in this portfolio, syncing across devices via WebDAV to a self-hosted Nextcloud instance, with JSON bulk import and automatic open/close timestamping.
 
 ### Mobile
 
