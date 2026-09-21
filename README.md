@@ -1,6 +1,6 @@
 # Paul O'Toole
 
-**Infrastructure & Systems Engineering Consultant**  
+**Infrastructure, Security & Data Consultant**  
 potoole@nosignal.ie · Maynooth, Ireland.  
 Available remotely across Ireland and the UK
 
