@@ -24,7 +24,7 @@ Not a GitHub repository, but a real, continuously operated infrastructure enviro
 
 **Resilience.** Automated backups across all 13 guests, with retention management and email notification for each run.
 
-**Recent work** includes a full LibreNMS rollout to every client device on the network (several hours of genuinely obscure Windows Update/CBS servicing-stack troubleshooting included), a staged and pre-flight-checked Proxmox 8→9 upgrade path, and migrating both personal sites from self-hosted Apache/tunnel delivery to a Hugo + Cloudflare Pages pipeline.
+**Recent work** includes a full LibreNMS rollout to every client device on the network, a staged and pre-flight-checked Proxmox 8→9 upgrade path, and migrating both personal sites from self-hosted Apache/tunnel delivery to a Hugo + Cloudflare Pages pipeline.
 
 ---
 
