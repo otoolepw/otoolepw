@@ -22,7 +22,7 @@ Not a GitHub repository, but a real, continuously operated infrastructure enviro
 
 **External exposure.** Every public-facing service (this includes two Hugo-based, Cloudflare Pages-deployed sites -- blog.nosignal.ie and nosignal.ie -- plus four other critical services) is published via Cloudflare Tunnel. Zero open inbound ports on the WAN; Cloudflare Access gates anything administrative.
 
-**Resilience.** Automated backups across all guests, with recovery regularly tested by actually restoring a backup and confirming the result, on a rolling schedule across the fleet.
+**Resilience.** Automated monthly backups across all 13 guests, with automatic retention and every run confirmed by email notification.
 
 **Recent work** includes a full LibreNMS rollout to every client device on the network (several hours of genuinely obscure Windows Update/CBS servicing-stack troubleshooting included), a staged and pre-flight-checked Proxmox 8→9 upgrade path, and migrating both personal sites from self-hosted Apache/tunnel delivery to a Hugo + Cloudflare Pages pipeline.
 
@@ -35,7 +35,7 @@ The projects below represent active and completed work across a consistent Pytho
 ### AI Chat Archive
 **ThreadArc**
 
-A unified, searchable archive of AI chat history across Copilot, Claude, ChatGPT and Gemini, with native apps for Windows, macOS, iOS and Android from a single Flutter codebase. Successor to the earlier cpl-loader/cpl-viewer pair (Copilot-only CSV → SQL Server ETL plus a FastAPI + React web viewer), which it retires once cutover completes. FastAPI + PostgreSQL backend on a homelab LXC, reachable only over Tailscale -- no public-facing hostname, ever, given the genuinely sensitive nature of the data. Real production data already imported (5,727 conversations across Copilot and Claude); Flutter client live for macOS, iOS and Android with full-text search, a KPI dashboard and monthly stats. Windows target and ChatGPT/Gemini parsers still to come. Built for personal data sovereignty -- no third-party services involved.
+A unified, searchable archive of AI chat history across Copilot, Claude, ChatGPT and Gemini, with native apps for Windows, macOS, iOS and Android from a single Flutter codebase. Successor to the earlier cpl-loader/cpl-viewer pair (Copilot-only CSV → SQL Server ETL plus a FastAPI + React web viewer), retiring both once cutover completes. FastAPI + PostgreSQL backend on a homelab LXC, reachable only over Tailscale -- no public-facing hostname, ever, given the genuinely sensitive nature of the data. Real production data already imported (5,727 conversations across Copilot and Claude); Flutter client live for macOS, iOS and Android with full-text search, a KPI dashboard and monthly stats. Windows target and ChatGPT/Gemini parsers still to come. Built for personal data sovereignty -- no third-party services involved.
 
 ### Homelab Utility Suite
 **GMARC** · **Metrix** · **Nexus**
