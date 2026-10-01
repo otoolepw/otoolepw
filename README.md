@@ -6,7 +6,7 @@ Available remotely across Ireland and the UK
 
 ---
 
-Thirty years across enterprise infrastructure, networking, cybersecurity, virtualisation, CRM platforms and business intelligence. Built and led Dynamics 365 deployments, an enterprise VMware platform and ETL/BI pipelines across the charity and pharmaceutical sectors. Now building actively in Python -- and more recently C#/.NET and Flutter/Dart -- across a portfolio of 21 private tools spanning data ownership, network diagnostics, epistemic tooling, hardware and process monitoring, drive auditing, personal task tracking, a mobile wellbeing app and a commercial SaaS product in active development, alongside a self-managed production infrastructure environment described below.
+Thirty years across enterprise infrastructure, networking, cybersecurity, virtualisation, CRM platforms and business intelligence. Built and led Dynamics 365 deployments, an enterprise VMware platform and ETL/BI pipelines across the charity and pharmaceutical sectors. Now building actively in Python -- and more recently C#/.NET and Flutter/Dart -- across a portfolio of 21 tools spanning data ownership, network diagnostics, epistemic tooling, hardware and process monitoring, drive auditing, personal task tracking, a mobile wellbeing app and a commercial SaaS product in active development, alongside a self-managed production infrastructure environment described below.
 
 ---
 
@@ -14,19 +14,23 @@ Thirty years across enterprise infrastructure, networking, cybersecurity, virtua
 
 Infrastructure covering virtualisation, networking, monitoring and self-hosted services. Documented with an issues log, technical reference, network diagrams and a changelog.
 
-**Compute and virtualisation.** Proxmox host, 13 LXC/VM workloads incl: Nextcloud, Jellyfin, PhotoPrism, Home Assistant, LibreNMS, MySQL and PostgreSQL databases, Kali, Apache and Nginx, and a Windows/SQL Server, Ubuntu & Debian VMs.
+**Compute and virtualisation.** Proxmox host, 13 LXC/VM workloads incl: Nextcloud, Jellyfin, PhotoPrism, Home Assistant, LibreNMS, MySQL and PostgreSQL databases, Kali, Apache and Nginx and a Windows/SQL Server, Ubuntu & Debian VMs.
 
-**Network and security.** pfSense firewall with VLAN segmentation, a managed switch with trunk/access ports, and a dedicated IoT access point. Snort IDS on the WAN interface with GeoIP blocking and threat-intelligence filtering.
+**Network and security.** pfSense firewall with VLAN segmentation, a managed switch with trunk/access ports and a dedicated IoT access point. Snort IDS on the WAN interface with GeoIP blocking and threat-intelligence filtering. A full security posture review closed every direct WAN exposure across the estate, added genuinely-verified fail2ban brute-force protection and real local TLS to every self-hosted service and established a living component rating system to track hardening progress over time.
 
-**Monitoring.** LibreNMS across the whole fleet, Proxmox guests, personal laptops, and network infrastructure (managed switches & APs), with port and sensor discovery and a custom dashboard.
+**Monitoring.** LibreNMS across the whole fleet, Proxmox guests, personal laptops and network infrastructure (managed switches & APs), with port and sensor discovery and a custom dashboard.
 
 **External exposure.** Self-hosted services are published through Cloudflare Tunnel, with no open inbound ports on the WAN. blog.nosignal.ie and nosignal.ie are static Hugo sites served directly by Cloudflare Pages, outside the tunnel entirely. Cloudflare Access protects anything administrative.
 
 **Resilience.** Automated backups across all 13 guests, with retention and email notification per run.
 
-**Recent work:** a full LibreNMS rollout to every client device, a staged Proxmox upgrade, and migrating both personal sites to Hugo + Cloudflare Pages.
+**Satellite TV via Jellyfin.** A free-to-air satellite tuner (Enigma2-based, twin DVB-S2X inputs) bridged onto the IoT VLAN, feeding channels and EPG data into Jellyfin's own Live TV feature as the single viewing interface across every client device.
 
-**Upcoming work:** a staged pfSense upgrade, and a new LXC self-hosting Piped, a privacy-focused YouTube frontend.
+**Recent work:** a full LibreNMS rollout to every client device, a staged Proxmox upgrade and migrating both personal sites to Hugo + Cloudflare Pages.
+
+**Upcoming work:** a new LXC self-hosting Piped, a privacy-focused YouTube frontend and a full Home Assistant upgrade.
+
+**In progress:** a staged pfSense firewall upgrade, planned and executed in phases across dedicated maintenance windows -- config backups, a package-manager repair and two sequential version hops, each independently verified before proceeding.
 
 ---
 
@@ -37,31 +41,31 @@ The projects below represent active and completed work across a consistent Pytho
 ### AI Chat Archive
 **ThreadArc**
 
-A unified, searchable archive of AI chat history across Copilot, Claude, ChatGPT and Gemini, with native apps for Windows, macOS, iOS and Android from a single Flutter codebase. Successor to the earlier cpl-loader/cpl-viewer pair (Copilot-only CSV → SQL Server ETL plus a FastAPI + React web viewer), retiring both once cutover completes. FastAPI + PostgreSQL backend on a homelab LXC, reachable only over Tailscale -- no public-facing hostname, ever, given the genuinely sensitive nature of the data. Real production data already imported (5,727 conversations across Copilot and Claude); Flutter client live for macOS, iOS and Android with full-text search, a KPI dashboard and monthly stats. Windows target and ChatGPT/Gemini parsers still to come. Built for personal data sovereignty -- no third-party services involved.
+A unified, searchable archive of AI chat history across Copilot, Claude, ChatGPT and Gemini, with native apps for Windows, macOS, iOS and Android from a single Flutter codebase. Successor to the earlier cpl-loader/cpl-viewer pair (Copilot-only CSV → SQL Server ETL plus a FastAPI + React web viewer), retiring both once cutover completes. FastAPI + PostgreSQL backend on a homelab LXC, reachable only over Tailscale -- no public-facing hostname, ever, given the genuinely sensitive nature of the data. Real production data already imported (6,200+ conversations, 100,000+ messages across Copilot and Claude); Flutter client live for macOS, iOS and Android with full-text search, a KPI dashboard and monthly stats. Windows target and ChatGPT/Gemini parsers still to come. Built for personal data sovereignty -- no third-party services involved.
 
 ### Homelab Utility Suite
 **GMARC** · **Metrix** · **Nexus**
 
-**GMARC** is a forensic-grade Gmail archiving desktop application with a 23-tab analytics dashboard covering senders, domains, labels, archive growth, activity heatmaps, email champions, financial emails, travel bookings, subscription audit, conversation partners and subject keyword frequency. Privacy-first by design -- external images blocked, JavaScript disabled, HTML sanitised. Packaged as a standalone Windows executable via PyInstaller.
+**GMARC** is a forensic-grade Gmail archiving desktop application with a 23-tab analytics dashboard covering senders, domains, labels, archive growth, activity heatmaps, email champions, financial emails, travel bookings, subscription audit, conversation partners and subject keyword frequency. Privacy-first by design -- external images blocked, JavaScript disabled, HTML sanitised. Now a single cross-platform codebase packaged natively for both Windows and macOS via PyInstaller.
 
 **Metrix** is a household utility tracker deployed live on a homelab LXC container. Parses Electric Ireland and Bord Gáis PDF bills automatically, tracks meter readings and surfaces consumption trends via Chart.js dashboards. Dual-utility architecture with electricity and gas live.
 
-**Nexus** is a self-hosted personal dashboard -- a curated 8×6 tile grid of shortcuts served from a private web server. Features drag-and-drop reorder, right-click tile editing, icon upload, live search and JSON-driven configuration. Mobile is read-only; all edits sync to the server instantly.
+**Nexus** is a self-hosted personal dashboard -- a curated 10-column responsive tile grid of shortcuts served from a private web server. Features drag-and-drop reorder, right-click tile editing, icon upload, live search and JSON-driven configuration. Mobile is read-only; all edits sync to the server instantly.
 
 ### Personal Network & Hardware Toolkit
 **PKTrace** · **NetStat++** · **SysMon** · **Spiketrax**
 
-Four complementary tools covering different layers of system visibility. PKTrace operates at the packet level (Wireshark-style capture with Scapy). NetStat++ monitors active TCP/UDP connections at the OS and process level. SysMon is a real-time hardware monitoring dashboard -- the portfolio's only C#/.NET project -- with 60-second rolling sparkline charts for CPU, Memory, Disk and Network, CPU/GPU temperatures via HWiNFO64, an internet speed test, and theme switching. Spiketrax is a generic, real-time CPU-spike monitor for any process by name or PID -- charts it live against a rolling ring buffer, detects sustained spikes via a dip-tolerant hysteresis state machine, captures a symbolicated stack sample of the offending process while it's spiking (macOS), and can optionally terminate it via exact PID/name match, never a substring.
+Four complementary tools covering different layers of system visibility. PKTrace operates at the packet level (Wireshark-style capture with Scapy). NetStat++ monitors active TCP/UDP connections at the OS and process level. SysMon is a real-time hardware monitoring dashboard -- the portfolio's only C#/.NET project -- with 60-second rolling sparkline charts for CPU, Memory, Disk and Network, CPU/GPU temperatures via HWiNFO64, an internet speed test and theme switching. Spiketrax is a generic, real-time CPU-spike monitor for any process by name or PID -- charts it live against a rolling ring buffer, detects sustained spikes via a dip-tolerant hysteresis state machine, captures a symbolicated stack sample of the offending process while it's spiking (macOS) and can optionally terminate it via exact PID/name match, never a substring.
 
 ### Epistemic Toolkit
 **Calibre** · **Veritas**
 
-Two tools for evaluating information quality. Calibre assesses the psychological impact style of communicators using Azure OpenAI -- stabilising or destabilising, scored and persisted to SQL Server. Veritas is a structured framework for evaluating the belief-worthiness of documentary-style media, combining a Discourse Layer (reasoning quality, evidence presence, speculation and narrative penalties) with a Participant Credence Score 70/30, producing a scored verdict with certainty percentage. Veritas now includes automatic YouTube transcript fetching, a linguistic heuristic analyser across 57 patterns, a batch evaluation CLI for CSV/JSON URL lists, and a local transcript cache.
+Two tools for evaluating information quality. Calibre assesses the psychological impact style of communicators using Azure OpenAI -- stabilising or destabilising, scored and persisted to SQL Server. Veritas is a structured framework for evaluating the belief-worthiness of documentary-style media, combining a Discourse Layer (reasoning quality, evidence presence, speculation and narrative penalties) with a Participant Credence Score 70/30, producing a scored verdict with certainty percentage. Veritas now includes automatic YouTube transcript fetching, a linguistic heuristic analyser across 57 patterns, a batch evaluation CLI for CSV/JSON URL lists and a local transcript cache.
 
 ### Document Management
 **WordPad++** · **Mermaid++** · **ClassDoc** · **FileScan**
 
-WordPad++ is a modern multi-tab rich text editor replacing the application Microsoft removed from Windows 11. Mermaid++ is a fully offline native editor and previewer for Mermaid diagrams, built because the standard web option requires a cloud round-trip with no connection to local files -- a native window over the OS's own WebKit engine, vendored renderer, SVG/PNG/PDF export, and auto-fit zoom. ClassDoc is a semantic document classification system using sentence-transformer embeddings, K-means clustering and a FastAPI web UI. FileScan is a personal drive-auditing tool with no third-party dependencies, crawling drives into a SQLite database and producing quick stats or full intelligence reports covering media detection, duplicate files and housekeeping recommendations.
+WordPad++ is a modern multi-tab rich text editor replacing the application Microsoft removed from Windows 11. Mermaid++ is a fully offline native editor and previewer for Mermaid diagrams, built because the standard web option requires a cloud round-trip with no connection to local files -- a native window over the OS's own WebKit engine, vendored renderer, SVG/PNG/PDF export and auto-fit zoom. ClassDoc is a semantic document classification system using sentence-transformer embeddings, K-means clustering and a FastAPI web UI. FileScan is a personal drive-auditing tool with no third-party dependencies, crawling drives into a SQLite database and producing quick stats or full intelligence reports covering media detection, duplicate files and housekeeping recommendations.
 
 ### Music & Gaming
 **Syntrax** · **IndieTrax**
@@ -69,9 +73,9 @@ WordPad++ is a modern multi-tab rich text editor replacing the application Micro
 Syntrax is an in-development cross-device music synchronisation engine, with a working library scanner, snapshot system and diff engine; the sync planner and device integration are still being built out. IndieTrax is a personal indie game metrics tracker with an ideas pipeline, daily metrics ingestion and retention snapshots.
 
 ### Standalone
-**SQLsnip** · **RecTrax** · **TaskTrax**
+**SQLsnip** · **RecTrax** · **TaskTrax** · **mactools**
 
-SQLsnip is a system-tray SQL snippet injector for SSMS with low-level keyboard hooks. RecTrax is a supermarket receipt ingestion engine for long-term price tracking, shrinkflation detection and cross-store comparison, with OCR ingestion and store-specific parsers. TaskTrax is a single-file task board -- no build step, no database, no account -- for tracking open threads across every other project in this portfolio, syncing across devices via WebDAV to a self-hosted Nextcloud instance, with JSON bulk import and automatic open/close timestamping.
+SQLsnip is a system-tray SQL snippet injector for SSMS with low-level keyboard hooks. RecTrax is a supermarket receipt ingestion engine for long-term price tracking, shrinkflation detection and cross-store comparison, with OCR ingestion and store-specific parsers. TaskTrax is a single-file task board -- no build step, no database, no account -- for tracking open threads across every other project in this portfolio, syncing across devices via WebDAV to a self-hosted Nextcloud instance, with JSON bulk import and automatic open/close timestamping. mactools is an early-stage collection of zsh scripts for Mac backup management -- interactive incremental hard-link snapshot backups via rsync, plus an iOS/iPadOS backup inspector reading Apple's own backup metadata directly.
 
 ### Mobile
 
@@ -79,7 +83,7 @@ SQLsnip is a system-tray SQL snippet injector for SSMS with low-level keyboard h
 
 ### Commercial SaaS
 
-A B2B SaaS product in active commercial development targeting the faith sector across Ireland and the UK, now live in production. FastAPI backend with Alembic migrations against PostgreSQL (EU-hosted for GDPR data residency), Jinja2 + Bootstrap 5 frontend. Live features include meeting minutes with a rich-text editor, collections tracking, internal messaging, platform administration, and a dual-entity billing model supporting EUR and GBP; document management, rota scheduling, safeguarding logs and a people directory are scaffolded and planned. Role-based access across 6 permission levels with JWT authentication.
+A B2B SaaS product in active commercial development targeting the faith sector across Ireland and the UK, now live in production. FastAPI backend with Alembic migrations against PostgreSQL (EU-hosted for GDPR data residency), Jinja2 + Bootstrap 5 frontend. Live features include meeting minutes with a rich-text editor, collections tracking, internal messaging, platform administration and a dual-entity billing model supporting EUR and GBP; document management, rota scheduling, safeguarding logs and a people directory are scaffolded and planned. Role-based access across 6 permission levels with JWT authentication.
 
 ---
 
