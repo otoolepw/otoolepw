@@ -41,7 +41,7 @@ The projects below represent active and completed work across a consistent Pytho
 ### AI Chat Archive
 **ThreadArc**
 
-A unified, searchable archive of AI chat history across Copilot, Claude, ChatGPT and Gemini, with native apps for Windows, macOS, iOS and Android from a single Flutter codebase. Successor to the earlier cpl-loader/cpl-viewer pair (Copilot-only CSV → SQL Server ETL plus a FastAPI + React web viewer), retiring both once cutover completes. FastAPI + PostgreSQL backend on a homelab LXC, reachable only over Tailscale -- no public-facing hostname, ever, given the genuinely sensitive nature of the data. Real production data already imported (6,200+ conversations, 100,000+ messages across Copilot and Claude); Flutter client live for macOS, iOS and Android with full-text search, a KPI dashboard and monthly stats. Windows target and ChatGPT/Gemini parsers still to come. Built for personal data sovereignty -- no third-party services involved.
+A unified, searchable archive of AI chat history across Copilot, Claude, ChatGPT and Gemini, with native apps for Windows, macOS, iOS and Android from a single Flutter codebase. Successor to the earlier cpl-loader/cpl-viewer pair (Copilot-only CSV → SQL Server ETL plus a FastAPI + React web viewer), both now retired and archived. FastAPI + PostgreSQL backend on a homelab LXC, reachable only over Tailscale -- no public-facing hostname, ever, given the genuinely sensitive nature of the data. Real production data already imported (6,200+ conversations, 100,000+ messages across Copilot and Claude); Flutter client live for macOS, iOS and Android with full-text search, a KPI dashboard and monthly stats. Windows target and ChatGPT/Gemini parsers still to come. Built for personal data sovereignty -- no third-party services involved.
 
 ### Homelab Utility Suite
 **GMARC** · **Metrix** · **Nexus**
@@ -73,9 +73,14 @@ WordPad++ is a modern multi-tab rich text editor replacing the application Micro
 Syntrax is an in-development cross-device music synchronisation engine, with a working library scanner, snapshot system and diff engine; the sync planner and device integration are still being built out. IndieTrax is a personal indie game metrics tracker with an ideas pipeline, daily metrics ingestion and retention snapshots.
 
 ### Standalone
-**SQLsnip** · **RecTrax** · **TaskTrax** · **mactools**
+**SQLsnip** · **TaskTrax** · **mactools**
 
-SQLsnip is a system-tray SQL snippet injector for SSMS with low-level keyboard hooks. RecTrax is a supermarket receipt ingestion engine for long-term price tracking, shrinkflation detection and cross-store comparison, with OCR ingestion and store-specific parsers. TaskTrax is a single-file task board -- no build step, no database, no account -- for tracking open threads across every other project in this portfolio, syncing across devices via WebDAV to a self-hosted Nextcloud instance, with JSON bulk import and automatic open/close timestamping. mactools is an early-stage collection of zsh scripts for Mac backup management -- interactive incremental hard-link snapshot backups via rsync, plus an iOS/iPadOS backup inspector reading Apple's own backup metadata directly.
+SQLsnip is a system-tray SQL snippet injector for SSMS with low-level keyboard hooks. TaskTrax is a single-file task board -- no build step, no database, no account -- for tracking open threads across every other project in this portfolio, syncing across devices via WebDAV to a self-hosted Nextcloud instance, with JSON bulk import and automatic open/close timestamping. mactools is an early-stage collection of zsh scripts for Mac backup management -- interactive incremental hard-link snapshot backups via rsync, plus an iOS/iPadOS backup inspector reading Apple's own backup metadata directly.
+
+### Retired
+**cpl-loader** · **cpl-viewer** · **RecTrax**
+
+cpl-loader and cpl-viewer were the original Copilot-only ETL pipeline and web viewer, superseded by ThreadArc. RecTrax was a supermarket receipt ingestion engine for price tracking, retired because of the wide variation in store receipt formats and the poor quality of receipt scans. All three are archived on GitHub and kept read-only for reference.
 
 ### Mobile
 
