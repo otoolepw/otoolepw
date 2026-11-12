@@ -6,7 +6,7 @@ Available remotely across Ireland and the UK
 
 ---
 
-Thirty years across enterprise infrastructure, networking, cybersecurity, virtualisation, CRM platforms and business intelligence. Built and led Dynamics 365 deployments, an enterprise VMware platform and ETL/BI pipelines across the charity and pharmaceutical sectors. Now building actively in Python -- and more recently C#/.NET and Flutter/Dart -- across a portfolio of 21 tools spanning data ownership, network diagnostics, epistemic tooling, hardware and process monitoring, drive auditing, personal task tracking, a mobile wellbeing app and a commercial SaaS product in active development, alongside a self-managed production infrastructure environment described below.
+Thirty years across enterprise infrastructure, networking, cybersecurity, virtualisation, CRM platforms and business intelligence. Built and led Dynamics 365 deployments, an enterprise VMware platform and ETL/BI pipelines across the charity and pharmaceutical sectors. Now building actively in Python -- and more recently C#/.NET and Flutter/Dart -- across a portfolio of 25 tools spanning data ownership, network diagnostics, epistemic tooling, hardware and process monitoring, drive auditing, personal task tracking, a mobile wellbeing app and a commercial SaaS product in active development, alongside a self-managed production infrastructure environment described below.
 
 ---
 
@@ -28,7 +28,7 @@ Infrastructure covering virtualisation, networking, monitoring and self-hosted s
 
 **Recent work:** a full LibreNMS rollout to every client device, a staged Proxmox upgrade and migrating both personal sites to Hugo + Cloudflare Pages.
 
-**Upcoming work:** a new LXC self-hosting Piped, a privacy-focused YouTube frontend and a full Home Assistant upgrade.
+**Upcoming work:** a full Home Assistant upgrade. Piped, a privacy-focused YouTube frontend, is now live on its own LXC behind Cloudflare Tunnel and Cloudflare Access.
 
 **In progress:** a staged pfSense firewall upgrade, planned and executed in phases across dedicated maintenance windows -- config backups, a package-manager repair and two sequential version hops, each independently verified before proceeding.
 
@@ -44,13 +44,15 @@ The projects below represent active and completed work across a consistent Pytho
 A unified, searchable archive of AI chat history across Copilot, Claude, ChatGPT and Gemini, with native apps for Windows, macOS, iOS and Android from a single Flutter codebase. Successor to the earlier cpl-loader/cpl-viewer pair (Copilot-only CSV → SQL Server ETL plus a FastAPI + React web viewer), both now retired and archived. FastAPI + PostgreSQL backend on a homelab LXC, reachable only over Tailscale -- no public-facing hostname, ever, given the genuinely sensitive nature of the data. Real production data already imported (6,200+ conversations, 100,000+ messages across Copilot and Claude); Flutter client live for macOS, iOS and Android with full-text search, a KPI dashboard and monthly stats. Windows target and ChatGPT/Gemini parsers still to come. Built for personal data sovereignty -- no third-party services involved.
 
 ### Homelab Utility Suite
-**GMARC** · **Metrix** · **Nexus**
+**GMARC** · **Metrix** · **Nexus** · **Piped**
 
 **GMARC** is a forensic-grade Gmail archiving desktop application with a 23-tab analytics dashboard covering senders, domains, labels, archive growth, activity heatmaps, email champions, financial emails, travel bookings, subscription audit, conversation partners and subject keyword frequency. Privacy-first by design -- external images blocked, JavaScript disabled, HTML sanitised. Now a single cross-platform codebase packaged natively for both Windows and macOS via PyInstaller.
 
 **Metrix** is a household utility tracker deployed live on a homelab LXC container. Parses Electric Ireland and Bord Gáis PDF bills automatically, tracks meter readings and surfaces consumption trends via Chart.js dashboards. Dual-utility architecture with electricity and gas live.
 
 **Nexus** is a self-hosted personal dashboard -- a curated 10-column responsive tile grid of shortcuts served from a private web server. Features drag-and-drop reorder, right-click tile editing, icon upload, live search and JSON-driven configuration. Mobile is read-only; all edits sync to the server instantly.
+
+**Piped** is a self-hosted deployment of the privacy-friendly YouTube front end on its own LXC, published through Cloudflare Tunnel and protected by Cloudflare Access, with a one-time Google Takeout migration script for playlists and history.
 
 ### Personal Network & Hardware Toolkit
 **PKTrace** · **NetStat++** · **SysMon** · **Spiketrax**
@@ -73,9 +75,9 @@ WordPad++ is a modern multi-tab rich text editor replacing the application Micro
 Syntrax is an in-development cross-device music synchronisation engine, with a working library scanner, snapshot system and diff engine; the sync planner and device integration are still being built out. IndieTrax is a personal indie game metrics tracker with an ideas pipeline, daily metrics ingestion and retention snapshots.
 
 ### Standalone
-**SQLsnip** · **TaskTrax** · **mactools**
+**QwikLabel** · **Gmail-CSS** · **WinSnip** · **SQLsnip** · **TaskTrax** · **mactools**
 
-SQLsnip is a system-tray SQL snippet injector for SSMS with low-level keyboard hooks. TaskTrax is a single-file task board -- no build step, no database, no account -- for tracking open threads across every other project in this portfolio, syncing across devices via WebDAV to a self-hosted Nextcloud instance, with JSON bulk import and automatic open/close timestamping. mactools is an early-stage collection of zsh scripts for Mac backup management -- interactive incremental hard-link snapshot backups via rsync, plus an iOS/iPadOS backup inspector reading Apple's own backup metadata directly.
+QwikLabel is a single-page web app for printing mailing addresses onto Avery A4 label sheets, built so a part-used sheet can be reused by choosing which label to start on. It has per-printer profiles and a CUPS print service on a homelab LXC. Gmail-CSS is a dark, high-contrast, colour-blind-friendly Gmail theme for Firefox built as a Stylus user style, with a navy, blue and orange palette and more than 60 tagged versions, each fixed by inspecting the real elements. WinSnip is a small Windows Print Screen tool that saves a region capture as a PNG and copies its path to the clipboard. SQLsnip is a system-tray SQL snippet injector for SSMS with low-level keyboard hooks. TaskTrax is a single-file task board -- no build step, no database, no account -- for tracking open threads across every other project in this portfolio, syncing across devices via WebDAV to a self-hosted Nextcloud instance, with JSON bulk import and automatic open/close timestamping. mactools is an early-stage collection of zsh scripts for Mac backup management -- interactive incremental hard-link snapshot backups via rsync, plus an iOS/iPadOS backup inspector reading Apple's own backup metadata directly.
 
 ### Retired
 **cpl-loader** · **cpl-viewer** · **RecTrax**
@@ -96,7 +98,7 @@ A B2B SaaS product in active commercial development targeting the faith sector a
 
 | Category | Technologies |
 |:---|:---|
-| **Languages** | Python · C# · Dart · T-SQL · PowerShell · Bash · TypeScript |
+| **Languages** | Python · C# · Dart · T-SQL · PowerShell · Bash · TypeScript · CSS |
 | **Python** | FastAPI · SQLAlchemy · Alembic · PySide6 · PyQt5 · Tkinter · EasyOCR · Scapy · pyodbc · psutil · pyqtgraph |
 | **C# / .NET** | .NET 9 · WPF · LiveChartsCore |
 | **Mobile** | Flutter · Riverpod · Drift (SQLite) · go_router · Material 3 |
@@ -105,7 +107,7 @@ A B2B SaaS product in active commercial development targeting the faith sector a
 | **Databases** | SQL Server · PostgreSQL · MySQL/MariaDB · SQLite |
 | **Servers & OS** | Windows Server · Debian / Ubuntu · Proxmox LXC/VM · VMware vSphere / ESXi |
 | **Networking & Security** | pfSense · Snort · NGINX · Apache · OpenVPN · Tailscale · LibreNMS · VLAN segmentation |
-| **Self-Hosted Services** | Nextcloud · Home Assistant |
+| **Self-Hosted Services** | Nextcloud · Home Assistant · Piped · CUPS |
 | **BI & Reporting** | Power BI · SSRS · SSIS · IBM Cognos |
 | **Tools** | Git · GitHub · SSMS · Redgate · PyInstaller |
 | **AI & Tooling** | Claude Code · Azure OpenAI · Ollama |
